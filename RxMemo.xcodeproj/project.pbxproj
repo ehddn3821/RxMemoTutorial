@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		35296B16286F26F600EFCC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35296B15286F26F600EFCC49 /* AppDelegate.swift */; };
 		35296B18286F26F600EFCC49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35296B17286F26F600EFCC49 /* SceneDelegate.swift */; };
-		35296B1A286F26F600EFCC49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35296B19286F26F600EFCC49 /* ViewController.swift */; };
 		35296B1D286F26F600EFCC49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35296B1B286F26F600EFCC49 /* Main.storyboard */; };
 		35296B20286F26F600EFCC49 /* RxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35296B1E286F26F600EFCC49 /* RxMemo.xcdatamodeld */; };
 		35296B22286F26F900EFCC49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35296B21286F26F900EFCC49 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 		35296B12286F26F600EFCC49 /* RxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35296B15286F26F600EFCC49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35296B17286F26F600EFCC49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		35296B19286F26F600EFCC49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35296B1C286F26F600EFCC49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35296B1F286F26F600EFCC49 /* RxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxMemo.xcdatamodel; sourceTree = "<group>"; };
 		35296B21286F26F900EFCC49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,9 +63,13 @@
 		35296B14286F26F600EFCC49 /* RxMemo */ = {
 			isa = PBXGroup;
 			children = (
+				35651E21286F298100ECE881 /* ViewModel */,
+				35651E20286F297800ECE881 /* Scene */,
+				35651E1F286F297400ECE881 /* Service */,
+				35651E1E286F296B00ECE881 /* ViewController */,
+				35651E1D286F296400ECE881 /* Model */,
 				35296B15286F26F600EFCC49 /* AppDelegate.swift */,
 				35296B17286F26F600EFCC49 /* SceneDelegate.swift */,
-				35296B19286F26F600EFCC49 /* ViewController.swift */,
 				35296B1B286F26F600EFCC49 /* Main.storyboard */,
 				35296B21286F26F900EFCC49 /* Assets.xcassets */,
 				35296B23286F26F900EFCC49 /* LaunchScreen.storyboard */,
@@ -75,6 +77,41 @@
 				35296B1E286F26F600EFCC49 /* RxMemo.xcdatamodeld */,
 			);
 			path = RxMemo;
+			sourceTree = "<group>";
+		};
+		35651E1D286F296400ECE881 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35651E1E286F296B00ECE881 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		35651E1F286F297400ECE881 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		35651E20286F297800ECE881 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		35651E21286F298100ECE881 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F0006543F71E603E1C8E876B /* Frameworks */ = {
@@ -91,7 +128,6 @@
 				8B97776560423EADF5ACC157 /* Pods-RxMemo.debug.xcconfig */,
 				5D7F57B6D4CE0BD24FEEB6F2 /* Pods-RxMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35296B1A286F26F600EFCC49 /* ViewController.swift in Sources */,
 				35296B16286F26F600EFCC49 /* AppDelegate.swift in Sources */,
 				35296B18286F26F600EFCC49 /* SceneDelegate.swift in Sources */,
 				35296B20286F26F600EFCC49 /* RxMemo.xcdatamodeld in Sources */,
