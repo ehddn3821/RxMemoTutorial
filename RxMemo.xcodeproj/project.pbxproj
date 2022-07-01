@@ -76,9 +76,7 @@
 				35651E1D286F296400ECE881 /* Model */,
 				35296B15286F26F600EFCC49 /* AppDelegate.swift */,
 				35296B17286F26F600EFCC49 /* SceneDelegate.swift */,
-				35296B1B286F26F600EFCC49 /* Main.storyboard */,
 				35296B21286F26F900EFCC49 /* Assets.xcassets */,
-				35296B23286F26F900EFCC49 /* LaunchScreen.storyboard */,
 				35296B26286F26F900EFCC49 /* Info.plist */,
 			);
 			path = RxMemo;
@@ -95,6 +93,8 @@
 		35651E1E286F296B00ECE881 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				35296B1B286F26F600EFCC49 /* Main.storyboard */,
+				35296B23286F26F900EFCC49 /* LaunchScreen.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
