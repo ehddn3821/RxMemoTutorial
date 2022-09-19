@@ -28,7 +28,9 @@ extension Scene {
                 fatalError()
             }
             
-            listVC.bind(viewModel: memoListViewModel)
+            DispatchQueue.main.async {
+                listVC.bind(viewModel: memoListViewModel)
+            }
             
             return nav
             
@@ -38,7 +40,9 @@ extension Scene {
                 fatalError()
             }
             
-            detailVC.bind(viewModel: memoDetailViewModel)
+            DispatchQueue.main.async {
+                detailVC.bind(viewModel: memoDetailViewModel)
+            }
             
             return detailVC
             
@@ -52,7 +56,9 @@ extension Scene {
                 fatalError()
             }
             
-            composeVC.bind(viewModel: memoComposeViewModel)
+            DispatchQueue.main.async {
+                composeVC.bind(viewModel: memoComposeViewModel)
+            }
             
             return nav
         }
