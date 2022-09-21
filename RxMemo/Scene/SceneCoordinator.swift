@@ -51,6 +51,8 @@ class SceneCoordinator: SceneCoordinatorType {
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }
+            
+            currentVC = target
         }
         
         return subject.asCompletable()
