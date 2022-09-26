@@ -50,6 +50,16 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
 //        navigationItem.leftBarButtonItem = backButton
         
         editButton.rx.action = viewModel.makeEditAction()
+        
+        shareButton.rx.tap
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .withUnretained(self)
+            .subscribe(onNext: { vc, _ in
+                let memo = vc.viewModel.memo.content
+                let activityVC = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+                vc.present(activityVC, animated: true)
+            })
+            .disposed(by: rx.disposeBag)
     }
 
     override func viewDidLoad() {
