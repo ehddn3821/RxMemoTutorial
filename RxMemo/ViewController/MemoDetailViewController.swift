@@ -48,6 +48,8 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
 //        backButton.rx.action = viewModel.popAction
 //        navigationItem.hidesBackButton = true
 //        navigationItem.leftBarButtonItem = backButton
+        
+        editButton.rx.action = viewModel.makeEditAction()
     }
 
     override func viewDidLoad() {
