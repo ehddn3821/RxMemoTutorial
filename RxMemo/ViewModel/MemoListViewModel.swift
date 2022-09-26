@@ -51,4 +51,11 @@ class MemoListViewModel: CommonViewModel {
                 .map { _ in }
         }
     }()
+    
+    lazy var deleteAction: Action<Memo, Void> = {
+        return Action { memo in
+            return self.storage.deleteMemo(memo: memo)
+                .map { _ in }
+        }
+    }()
 }
