@@ -39,6 +39,15 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
                     fatalError()
                 }
             }.disposed(by: rx.disposeBag)
+        
+//        var backButton = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
+//        viewModel.title
+//            .drive(backButton.rx.title)
+//            .disposed(by: rx.disposeBag)
+//
+//        backButton.rx.action = viewModel.popAction
+//        navigationItem.hidesBackButton = true
+//        navigationItem.leftBarButtonItem = backButton
     }
 
     override func viewDidLoad() {

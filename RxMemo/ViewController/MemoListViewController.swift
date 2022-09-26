@@ -28,6 +28,15 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             }.disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.makeCreateAction()
+        
+        Observable.zip(listTableView.rx.modelSelected(Memo.self), listTableView.rx.itemSelected)
+            .withUnretained(self)
+            .do(onNext: { vc, data in
+                vc.listTableView.deselectRow(at: data.1, animated: true)
+            })
+            .map { $1.0 }
+            .bind(to: viewModel.detailAction.inputs)
+            .disposed(by: rx.disposeBag)
     }
 
     override func viewDidLoad() {
