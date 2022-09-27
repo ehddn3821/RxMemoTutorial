@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let coordinator = SceneCoordinator(window: window!)
-        let storage = MemoryStorage()
+//        let storage = MemoryStorage()
+        let storage = CoreDataStorage(modelName: "RxMemo")
         let listViewModel = MemoListViewModel(title: "나의 메모", sceneCoordinator: coordinator, storage: storage)
         let listScene = Scene.list(listViewModel)
         
@@ -51,7 +52,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 
